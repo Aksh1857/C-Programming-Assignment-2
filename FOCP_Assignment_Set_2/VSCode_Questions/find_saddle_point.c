@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(void){int r,c;if(scanf("%d%d",&r,&c)!=2||r<1||c<1||r>100||c>100)return 0;long long a[100][100];for(int i=0;i<r;i++)for(int j=0;j<c;j++)scanf("%lld",&a[i][j]);for(int i=0;i<r;i++)for(int j=0;j<c;j++){int minrow=1,maxcol=1;for(int k=0;k<c;k++)if(a[i][k]<a[i][j])minrow=0;for(int k=0;k<r;k++)if(a[k][j]>a[i][j])maxcol=0;if(minrow&&maxcol){printf("%d %d %lld\n",i,j,a[i][j]);return 0;}}puts("None");return 0;}

@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(void){int r,c;if(scanf("%d%d",&r,&c)!=2||r<1||c<1||r>100||c>100)return 0;long long a[100][100],sum;for(int i=0;i<r;i++)for(int j=0;j<c;j++)scanf("%lld",&a[i][j]);for(int i=0;i<r;i++){sum=0;for(int j=0;j<c;j++)sum+=a[i][j];printf("%s%lld",i?" ":"",sum);}putchar('\n');for(int j=0;j<c;j++){sum=0;for(int i=0;i<r;i++)sum+=a[i][j];printf("%s%lld",j?" ":"",sum);}putchar('\n');return 0;}
